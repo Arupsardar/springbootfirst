@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Book {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
     private String name;
@@ -24,8 +24,7 @@ public class Book {
         this.title = title;
     }
 
-    public Book() {
-    }
+    
 
     public int getId() {
         return id;
@@ -56,6 +55,9 @@ public class Book {
     @Override
     public String toString() {
         return "Book [id=" + id + ", name=" + name + ", title=" + title + "]";
+    }
+
+    public Book() {
     }
 
 
